@@ -173,3 +173,4 @@ echo " [SECURE]  Permissions set to 600 (Owner Read/Write only)" | lolcat
 echo ""
 echo "----------------------------------------------------------" | lolcat
 echo ""
+echo "                            BY x606                        " | lolcat
