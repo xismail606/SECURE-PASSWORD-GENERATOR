@@ -4,7 +4,7 @@ Requirements to Run the Script
 # ls
 # cd figlet-fonts
 # Is
-# rm README-.md
+# rm README.md
 # sudo mv * /usr/share/figlet
 # showfigfonts
 Other requirements: Bash shell (default on most Linux distributions).
