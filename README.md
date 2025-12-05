@@ -4,7 +4,7 @@ When these optional tools are installed, the script automatically enables enhanc
 •	Optional Visual Enhancements (Not Required)
 The following packages provide colored banners and extra fonts, but the script will still run normally without them:
 # sudo apt install lolcat
- #sudo git clone https://github.com/xero/figlet-fonts.git
+# sudo git clone https://github.com/xero/figlet-fonts.git
 # ls
 # cd figlet-fonts
 # Is
@@ -16,6 +16,6 @@ The following packages provide colored banners and extra fonts, but the script w
 •	Basic command-line environment
 
 . How to Run the Script
-#cd /path/to/script
-#chmod +x {script name}.sh
+# cd /path/to/script
+# chmod +x {script name}.sh
 # ./ {script name}.sh
