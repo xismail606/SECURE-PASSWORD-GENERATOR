@@ -213,8 +213,14 @@ fi
 else
     if command -v lolcat &> /dev/null; then
         echo "Password not saved to file." | lolcat
+    echo "                    ╔═══════════════╗                      " | lolcat
+    echo "                    ║    BY x606    ║                      " | lolcat
+    echo "                    ╚═══════════════╝                      " | lolcat
+    echo ""
     else
         echo "Password not saved to file."
+      echo "                            BY x606                        "
     fi
 fi
+
 
