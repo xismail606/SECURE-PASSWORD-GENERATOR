@@ -87,10 +87,11 @@ echo ""
 if [[ -z "$charset" ]]; then
     if command -v lolcat &> /dev/null; then
         echo " [ERROR] You must select at least one character type!" | lolcat
-
+echo ""
         echo "Exiting..." | lolcat
     else
         echo " [ERROR] You must select at least one character type!"
+echo ""        
         echo "Exiting..."
     fi
 
@@ -208,3 +209,4 @@ else
     echo ""
     echo "                            BY x606                        "
 fi
+
