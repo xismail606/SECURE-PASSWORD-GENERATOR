@@ -16,6 +16,6 @@ The following packages provide colored banners and extra fonts, but the script w
 •	Basic command-line environment
 
 . How to Run the Script
-1- cd /path/to/script
-2- chmod +x {script name}.sh
-3. ./ {script name}.sh
+#cd /path/to/script
+#chmod +x {script name}.sh
+# ./ {script name}.sh
