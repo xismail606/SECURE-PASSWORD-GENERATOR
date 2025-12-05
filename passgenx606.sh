@@ -208,6 +208,10 @@ else
 fi
 
 else
-    echo "Password not saved to file."
+    if command -v lolcat &> /dev/null; then
+        echo "Password not saved to file." | lolcat
+    else
+        echo "Password not saved to file."
+    fi
 fi
-     
+
