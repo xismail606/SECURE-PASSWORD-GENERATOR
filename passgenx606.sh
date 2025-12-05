@@ -9,13 +9,13 @@ if command -v figlet &> /dev/null && command -v lolcat &> /dev/null; then
     # if figlet and lolcat available in ur  os
     echo "                        ============================================" | lolcat
     figlet -f Sub-Zero "PASS GEN" | lolcat
-    figlet -f small "                      By Team 606                        " | lolcat
+    figlet -f small "                      By  x606                        " | lolcat
     echo "                        ============================================" | lolcat
 else
     # if lolcat & figlet not available in ur os
     echo "          ============================================"
     echo "                     SECURE PASSWORD GENERATOR"
-    echo "                           By Team 606                    "
+    echo "                           By x606                    "
     echo "          ============================================"
 fi
 echo ""
@@ -217,3 +217,4 @@ else
         echo "Password not saved to file."
     fi
 fi
+
