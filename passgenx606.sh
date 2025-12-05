@@ -85,12 +85,15 @@ echo ""
 # ========================================================
 
 if [[ -z "$charset" ]]; then
-    echo " [ERROR] You must select at least one character type!" 
-    
+
 if command -v lolcat &> /dev/null; then
-        echo "Exiting..." | lolcat
-    else
-        echo "Exiting..."
+         echo " [ERROR] You must select at least one character type!"  | lolcat
+echo ""
+         echo "              Exiting..." | lolcat
+else
+         echo " [ERROR] You must select at least one character type!" 
+echo""
+        echo "               Exiting..."
     fi
     exit 1
 fi
@@ -99,7 +102,6 @@ fi
 # LOADING EFFECT (COUNT TO 8)
 # ========================================================
 
-# Check if lolcat exists
 if command -v lolcat &> /dev/null; then
     echo -n "Generating password... " | lolcat
     for i in {1..8}; do
@@ -128,7 +130,7 @@ for (( i=0; i<pass_len; i++ )); do
     # Using /dev/urandom instead of $RANDOM for security
     # We use 'od' to read 2 bytes of random data and convert to integer
     # ========================================================
-    
+ 
     rand_int=$(od -An -N2 -tu2 < /dev/urandom | tr -d '[:space:]')
     rand_idx=$(( rand_int % charset_len ))
 
@@ -214,4 +216,3 @@ else
         echo "Password not saved to file."
     fi
 fi
-
