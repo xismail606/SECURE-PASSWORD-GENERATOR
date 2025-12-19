@@ -13,21 +13,21 @@
 
 🔹 Install lolcat (Colorful Output)
 
-   #sudo apt install lolcat
+   ```sudo apt install lolcat```
 
 🔹 Install Extra figlet Fonts
 
-   #sudo git clone https://github.com/xero/figlet-fonts.git
+  ```sudo git clone https://github.com/xero/figlet-fonts.git```
    
-   #cd figlet-fonts
+   ```cd figlet-fonts```
    
-   #ls
+   ```ls```
    
-   #rm README.md
+   ```rm README.md```
    
-   #sudo mv * /usr/share/figlet
+   ```sudo mv * /usr/share/figlet```
    
-   #showfigfonts
+   ```#showfigfonts```
 
 
 🟢 If these tools are missing, the script gracefully falls back to standard text output.
@@ -50,23 +50,23 @@
  
    1️⃣ Navigate to the script directory:
   
-   #cd /path/to/script
+   ```cd /path/to/script```
   
   
    2️⃣ Make the script executable:
   
-   #chmod +x script_name.sh
+  ```chmod +x script_name.sh```
   
   
    3️⃣ Run the script:
   
-   #./script_name.sh
+   ```./script_name.sh```
   
    OR
    
    4️⃣ Run the script:
   
-   #bash script_name.sh
+   ```bash script_name.sh```
 
 🚀 The script will start immediately.
 
