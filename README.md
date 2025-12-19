@@ -1,4 +1,4 @@
-#🐧 Bash Script – Linux Compatible
+🐧 Bash Script – Linux Compatible
 📌 Overview
 
 This script is built to run on any standard Linux environment using the Bash shell.
@@ -15,14 +15,21 @@ The script will still run normally without them.
 sudo apt install lolcat
 
 🔹 Install Extra figlet Fonts
+
 sudo git clone https://github.com/xero/figlet-fonts.git
+
 cd figlet-fonts
+
 ls
+
 rm README.md
+
 sudo mv * /usr/share/figlet
+
 showfigfonts
 
 -------------------------------------------
+
 🟢 If these tools are missing, the script gracefully falls back to standard text output.
 
 ⚙️ Mandatory Requirements
@@ -34,7 +41,9 @@ Only the following are required:
 💻 Basic command-line environment
 
 No additional dependencies are needed.
+
 -------------------------------
+
 ▶️ How to Run the Script
 
 1️⃣ Navigate to the script directory:
@@ -55,7 +64,9 @@ chmod +x script_name.sh
 4️⃣ Run the script:
 
 bash script_name.sh
+
 ----------------------
+
 🚀 The script will start immediately.
 
 🧠 Design Philosophy
@@ -76,6 +87,6 @@ Safe to run without root (except for optional installations)
 
 Ideal for terminals, servers, and minimal environments
 
-⭐ Recommendation
+------------------------------------------
 
-If you like this project, consider giving it a star ⭐ on GitHub!
+                                                                          If you like this project, consider giving it a star ⭐ on GitHub!
