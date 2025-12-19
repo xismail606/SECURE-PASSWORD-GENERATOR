@@ -12,6 +12,7 @@ These tools are optional and only improve the visual appearance.
 The script will still run normally without them.
 
 🔹 Install lolcat (Colorful Output)
+
 sudo apt install lolcat
 
 🔹 Install Extra figlet Fonts
