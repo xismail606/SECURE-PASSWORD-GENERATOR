@@ -1,12 +1,12 @@
 # 🐧 Bash Script – Linux Compatible
-📌 Overview
+### 📌 Overview
 
 This script is built to run on any standard Linux environment using the Bash shell.
 All core functionalities work out of the box, even if optional visual tools are not installed.
 
 ✨ When optional tools are available, the script automatically enables enhanced visual output such as colorful banners and styled text.
 ----------------------------
-🎨 Optional Visual Enhancements (Not Required)
+### 🎨 Optional Visual Enhancements (Not Required)
 
 These tools are optional and only improve the visual appearance.
 The script will still run normally without them.
@@ -29,11 +29,12 @@ The script will still run normally without them.
 
 #showfigfonts
 
--------------------------------------------
 
 🟢 If these tools are missing, the script gracefully falls back to standard text output.
 
-⚙️ Mandatory Requirements
+-------------------------------------------
+
+### ⚙️ Mandatory Requirements
 
 Only the following are required:
 
@@ -45,7 +46,7 @@ No additional dependencies are needed.
 
 -------------------------------
 
-▶️ How to Run the Script
+### ▶️ How to Run the Script
 
 1️⃣ Navigate to the script directory:
 
@@ -62,15 +63,16 @@ No additional dependencies are needed.
 #./script_name.sh
 
  OR
+ 
 4️⃣ Run the script:
 
 #bash script_name.sh
 
-----------------------
-
 🚀 The script will start immediately.
 
-🧠 Design Philosophy
+----------------------
+
+### 🧠 Design Philosophy
 
 ✔️ Works on clean Linux systems
 
@@ -80,7 +82,9 @@ No additional dependencies are needed.
 
 ✔️ Clean and readable output
 
-📎 Notes
+-----------------------------
+
+###📎 Notes
 
 Tested on common Linux distributions
 
