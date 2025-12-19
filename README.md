@@ -84,7 +84,7 @@ No additional dependencies are needed.
 
 -----------------------------
 
-###📎 Notes
+### 📎Notes
 
 Tested on common Linux distributions
 
