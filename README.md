@@ -1,4 +1,4 @@
-## 🐧 Bash Script – Linux Compatible
+# 🐧 Bash Script – Linux Compatible
 📌 Overview
 
 This script is built to run on any standard Linux environment using the Bash shell.
