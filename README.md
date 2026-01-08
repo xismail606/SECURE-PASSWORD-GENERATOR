@@ -76,6 +76,24 @@ sudo mv * /usr/share/figlet
 
 ---
 
+<!-- ===================== CLONE ===================== -->
+<h2 align="center"> 📥 Clone The Repository </h2>
+
+<p align="center">
+Get the project source code directly from GitHub:
+</p>
+
+<pre><strong>
+git clone https://github.com/xismail606/SECURE-PASSWORD-GENERATOR.git
+cd SECURE-PASSWORD-GENERATOR
+</strong></pre>
+
+<p align="center">
+After cloning, follow the installation steps below to set permissions and install the tool system-wide.
+</p>
+
+---
+
 <!-- ===================== REQUIREMENTS ===================== -->
 <h2 align="center"> ⚙️ Requirements </h2>
 
