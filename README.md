@@ -64,7 +64,7 @@ These tools are <strong>optional</strong> and only enhance visual output.<br>
 PassGen works perfectly without them.
 </p>
 
-```md
+```bash
 sudo apt install lolcat
 
 git clone https://github.com/xero/figlet-fonts.git
@@ -94,7 +94,7 @@ sudo mv * /usr/share/figlet
 Get the project source code directly from GitHub:
 </p>
 
-```md
+```bash
 + git clone https://github.com/xismail606/SECURE-PASSWORD-GENERATOR.git
 + cd SECURE-PASSWORD-GENERATOR
 ```
@@ -123,7 +123,7 @@ SECURE-PASSWORD-GENERATOR
 <!-- ===================== PERMISSIONS ===================== -->
 <h2 align="center"> 🔐 Set Execute Permissions </h2>
 
-```md
+```bash
 chmod +x passgen
 chmod +x passgen-lib/*.sh
 ```
@@ -133,7 +133,7 @@ chmod +x passgen-lib/*.sh
 <!-- ===================== INSTALLATION ===================== -->
 <h2 align="center"> 📦 System-Wide Installation </h2>
 
-```md
+```bash
 sudo mv passgen /usr/local/bin/
 sudo mv passgen-lib /usr/local/bin/
 ```
@@ -157,7 +157,7 @@ Final installation layout:
 <!-- ===================== USAGE ===================== -->
 <h2 align="center"> ▶️ Usage </h2>
 
-```md
+```bash
 passgen
 -
 passgen --help
