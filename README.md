@@ -22,6 +22,7 @@
 <!-- ===================== ABOUT ===================== -->
 <h2 align="center"> 💡 About The Project </h2>
 
+```bash
 <pre style="color:#ff6b6b;"><strong>
 tool_name: PassGen
 type: CLI Security Utility
@@ -32,14 +33,13 @@ design_principles:
   - Zero Forced Dependencies
   - Modular Architecture
   - Clean CLI Experience
-</strong></pre>
-
+```
 ---
 
 <!-- ===================== FEATURES ===================== -->
 <h2 align="center"> ✨ Features </h2>
 
-<ul>
+```bash
   <li>🔐 Cryptographically secure randomness using <code>/dev/urandom</code></li>
   <li>⚙️ Custom password length</li>
   <li>🔡 Character set selection:
@@ -53,7 +53,7 @@ design_principles:
   <li>🎨 Automatic detection of <code>figlet</code> & <code>lolcat</code></li>
   <li>💾 Optional secure password saving</li>
   <li>🔒 Saved files use permission <code>600</code></li>
-</ul>
+```
 
 ---
 
