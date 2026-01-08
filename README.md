@@ -92,12 +92,13 @@ sudo mv * /usr/share/figlet
 <h2 align="center"> 📁 Project Structure </h2>
 
 <pre><strong>
-passgen
-passgen-lib/
-├── utils.sh        # Helper & utility functions
-├── help.sh         # CLI help & version handling
-├── generator.sh    # Core password generation logic
-└── banner.sh       # Visual banner & output handling
+SECURE-PASSWORD-GENERATOR
+├── passgen
+└──passgen-lib/
+  ├── utils.sh        # Helper & utility functions
+  ├── help.sh         # CLI help & version handling
+  ├── generator.sh    # Core password generation logic
+  └── banner.sh       # Visual banner & output handling
 </strong></pre>
 
 ---
@@ -116,8 +117,8 @@ chmod +x passgen-lib/*.sh
 <h2 align="center"> 📦 System-Wide Installation </h2>
 
 <pre><strong>
-sudo mv passgen /usr/local/bin/passgen
-sudo mv passgen-lib /usr/local/bin/passgen-lib
+sudo mv passgen /usr/local/bin/
+sudo mv passgen-lib /usr/local/bin/
 </strong></pre>
 
 <p align="center">
@@ -143,13 +144,6 @@ Final installation layout:
 passgen
 </strong></pre>
 
-<p align="center">
-or locally:
-</p>
-
-<pre><strong>
-./passgen
-</strong></pre>
 
 ---
 
