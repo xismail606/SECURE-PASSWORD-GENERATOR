@@ -22,7 +22,7 @@
 <!-- ===================== ABOUT ===================== -->
 <h2 align="center"> 💡 About The Project </h2>
 
-<pre><strong>
+<pre style="color:#ff6b6b;"><strong>
 tool_name: PassGen
 type: CLI Security Utility
 language: Bash
@@ -95,7 +95,7 @@ sudo mv * /usr/share/figlet
 Get the project source code directly from GitHub:
 </p>
 
-<pre><strong>
+<pre style="color:#00ff99;"><strong>
 git clone https://github.com/xismail606/SECURE-PASSWORD-GENERATOR.git
 cd SECURE-PASSWORD-GENERATOR
 </strong></pre>
@@ -109,7 +109,7 @@ After cloning, follow the installation steps below to set permissions and instal
 <!-- ===================== STRUCTURE ===================== -->
 <h2 align="center"> 📁 Project Structure </h2>
 
-<pre><strong>
+<pre style="color:#b388ff;"><strong>
 SECURE-PASSWORD-GENERATOR
 ├── passgen
 └──passgen-lib/
@@ -124,7 +124,7 @@ SECURE-PASSWORD-GENERATOR
 <!-- ===================== PERMISSIONS ===================== -->
 <h2 align="center"> 🔐 Set Execute Permissions </h2>
 
-<pre><strong>
+<pre style="color:#00ff99;"><strong>
 chmod +x passgen
 chmod +x passgen-lib/*.sh
 </strong></pre>
@@ -134,7 +134,7 @@ chmod +x passgen-lib/*.sh
 <!-- ===================== INSTALLATION ===================== -->
 <h2 align="center"> 📦 System-Wide Installation </h2>
 
-<pre><strong>
+<pre style="color:#00ff99;"><strong>
 sudo mv passgen /usr/local/bin/
 sudo mv passgen-lib /usr/local/bin/
 </strong></pre>
@@ -143,7 +143,7 @@ sudo mv passgen-lib /usr/local/bin/
 Final installation layout:
 </p>
 
-<pre><strong>
+<pre style="color:#b388ff;"><strong>
 /usr/local/bin/
 ├── passgen
 └── passgen-lib/
@@ -158,7 +158,7 @@ Final installation layout:
 <!-- ===================== USAGE ===================== -->
 <h2 align="center"> ▶️ Usage </h2>
 
-<pre><strong>
+<pre style="color:#00ff99;"><strong>
 passgen
 -
 passgen --help
