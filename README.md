@@ -1,7 +1,7 @@
 <!-- ===================== HEADER ===================== -->
 <div align="center">
   <img 
-    src="https://capsule-render.vercel.app/api?type=waving&color=gradient&text=x606%%PassGen&height=140&section=header"
+    src="https://capsule-render.vercel.app/api?type=waving&color=gradient&text=x606 PassGen&height=140&section=header"
     alt="PassGen Header"
     width="100%"
   />
