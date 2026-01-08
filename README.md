@@ -76,6 +76,18 @@ sudo mv * /usr/share/figlet
 
 ---
 
+<!-- ===================== REQUIREMENTS ===================== -->
+<h2 align="center"> ⚙️ Requirements </h2>
+
+<ul>
+  <li>🐚 Bash shell</li>
+  <li>💻 Basic Linux command-line environment</li>
+</ul>
+
+<p align="center"><strong>No additional dependencies required</strong></p>
+
+---
+
 <!-- ===================== CLONE ===================== -->
 <h2 align="center"> 📥 Clone The Repository </h2>
 
@@ -91,18 +103,6 @@ cd SECURE-PASSWORD-GENERATOR
 <p align="center">
 After cloning, follow the installation steps below to set permissions and install the tool system-wide.
 </p>
-
----
-
-<!-- ===================== REQUIREMENTS ===================== -->
-<h2 align="center"> ⚙️ Requirements </h2>
-
-<ul>
-  <li>🐚 Bash shell</li>
-  <li>💻 Basic Linux command-line environment</li>
-</ul>
-
-<p align="center"><strong>No additional dependencies required</strong></p>
 
 ---
 
