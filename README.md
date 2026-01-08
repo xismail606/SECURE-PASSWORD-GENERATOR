@@ -142,6 +142,9 @@ Final installation layout:
 
 <pre><strong>
 passgen
+-
+passgen --help
+passgen --version
 </strong></pre>
 
 
