@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+BASE_DIR="/usr/local/bin/passgen-lib"
+
+source "$BASE_DIR/lib/help.sh"
+source "$BASE_DIR/lib/utils.sh"
+source "$BASE_DIR/lib/banner.sh"
+source "$BASE_DIR/lib/generator.sh"
+
+handle_cli "$@"
+
+clear
+show_banner
+run_generator
+
