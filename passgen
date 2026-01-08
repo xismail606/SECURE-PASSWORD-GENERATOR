@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-BASE_DIR="/usr/local/bin/passgen-lib"
+BASE_DIR="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)/passgen-lib"
 
 source "/usr/local/bin/passgen-lib/help.sh"
 source "/usr/local/bin/passgen-lib/utils.sh"
