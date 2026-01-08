@@ -186,7 +186,7 @@ passgen --version
 <p align="center">
 <strong>x606</strong><br>
 Penetration Testing Enthusiast<br>
-Offensive Security • Red Team Fundamentals • Automation
+ • Offensive Security • Red Team Fundamentals •
 </p>
 
 ---
