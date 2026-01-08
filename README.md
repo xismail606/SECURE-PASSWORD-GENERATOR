@@ -23,7 +23,6 @@
 <h2 align="center"> 💡 About The Project </h2>
 
 ```bash
-<pre style="color:#ff6b6b;"><strong>
 tool_name: PassGen
 type: CLI Security Utility
 language: Bash
@@ -39,7 +38,7 @@ design_principles:
 <!-- ===================== FEATURES ===================== -->
 <h2 align="center"> ✨ Features </h2>
 
-```bash
+<ul>
   <li>🔐 Cryptographically secure randomness using <code>/dev/urandom</code></li>
   <li>⚙️ Custom password length</li>
   <li>🔡 Character set selection:
@@ -53,7 +52,7 @@ design_principles:
   <li>🎨 Automatic detection of <code>figlet</code> & <code>lolcat</code></li>
   <li>💾 Optional secure password saving</li>
   <li>🔒 Saved files use permission <code>600</code></li>
-```
+</ul>
 
 ---
 
@@ -65,14 +64,14 @@ These tools are <strong>optional</strong> and only enhance visual output.<br>
 PassGen works perfectly without them.
 </p>
 
-<pre><strong>
+```md
 sudo apt install lolcat
 
 git clone https://github.com/xero/figlet-fonts.git
 cd figlet-fonts
 rm README.md
 sudo mv * /usr/share/figlet
-</strong></pre>
+```
 
 ---
 
@@ -109,7 +108,7 @@ After cloning, follow the installation steps below to set permissions and instal
 <!-- ===================== STRUCTURE ===================== -->
 <h2 align="center"> 📁 Project Structure </h2>
 
-<pre style="color:#b388ff;"><strong>
+```bash
 SECURE-PASSWORD-GENERATOR
 ├── passgen
 └──passgen-lib/
@@ -117,33 +116,33 @@ SECURE-PASSWORD-GENERATOR
   ├── help.sh         # CLI help & version handling
   ├── generator.sh    # Core password generation logic
   └── banner.sh       # Visual banner & output handling
-</strong></pre>
+```
 
 ---
 
 <!-- ===================== PERMISSIONS ===================== -->
 <h2 align="center"> 🔐 Set Execute Permissions </h2>
 
-<pre style="color:#00ff99;"><strong>
+```md
 chmod +x passgen
 chmod +x passgen-lib/*.sh
-</strong></pre>
+```
 
 ---
 
 <!-- ===================== INSTALLATION ===================== -->
 <h2 align="center"> 📦 System-Wide Installation </h2>
 
-<pre style="color:#00ff99;"><strong>
+```md
 sudo mv passgen /usr/local/bin/
 sudo mv passgen-lib /usr/local/bin/
-</strong></pre>
+```
 
 <p align="center">
 Final installation layout:
 </p>
 
-<pre style="color:#b388ff;"><strong>
+```bash
 /usr/local/bin/
 ├── passgen
 └── passgen-lib/
@@ -151,19 +150,19 @@ Final installation layout:
     ├── help.sh
     ├── generator.sh
     └── banner.sh
-</strong></pre>
+```
 
 ---
 
 <!-- ===================== USAGE ===================== -->
 <h2 align="center"> ▶️ Usage </h2>
 
-<pre style="color:#00ff99;"><strong>
+```md
 passgen
 -
 passgen --help
 passgen --version
-</strong></pre>
+```
 
 
 ---
