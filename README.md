@@ -1,94 +1,185 @@
-# 🐧 Bash Script – Linux Compatible
-### 📌 Overview
+<!-- ===================== HEADER ===================== -->
+<div align="center">
+  <img 
+    src="https://capsule-render.vercel.app/api?type=waving&color=gradient&text=PassGen&height=140&section=header"
+    alt="PassGen Header"
+    width="100%"
+  />
+</div>
 
- This script is built to run on any standard Linux environment using the Bash shell.
- All core functionalities work out of the box, even if optional visual tools are not installed.
+---
 
-✨ When optional tools are available, the script automatically enables enhanced visual output such as colorful banners and styled text.
-----------------------------
-### 🎨 Optional Visual Enhancements (Not Required)
+<!-- ===================== TITLE ===================== -->
+<h1 align="center"> 🐧 PassGen – Secure Password Generator </h1>
 
- These tools are optional and only improve the visual appearance.
- The script will still run normally without them.
+<p align="center">
+  A secure, modular, and Linux-compatible password generator written in Bash.<br>
+  Designed for clean systems with zero forced dependencies.
+</p>
 
-🔹 Install lolcat (Colorful Output)
+---
 
-   ```sudo apt install lolcat```
+<!-- ===================== ABOUT ===================== -->
+<h2 align="center"> 💡 About The Project </h2>
 
-🔹 Install Extra figlet Fonts
+<pre><strong>
+tool_name: PassGen
+type: CLI Security Utility
+language: Bash
+platform: Linux
+design_principles:
+  - Security First
+  - Zero Forced Dependencies
+  - Modular Architecture
+  - Clean CLI Experience
+</strong></pre>
 
-  ```sudo git clone https://github.com/xero/figlet-fonts.git```
-   
-   ```cd figlet-fonts```
-   
-   ```ls```
-   
-   ```rm README.md```
-   
-   ```sudo mv * /usr/share/figlet```
-   
-   ```#showfigfonts```
+---
 
+<!-- ===================== FEATURES ===================== -->
+<h2 align="center"> ✨ Features </h2>
 
-🟢 If these tools are missing, the script gracefully falls back to standard text output.
+<ul>
+  <li>🔐 Cryptographically secure randomness using <code>/dev/urandom</code></li>
+  <li>⚙️ Custom password length</li>
+  <li>🔡 Character set selection:
+    <ul>
+      <li>Lowercase letters</li>
+      <li>Uppercase letters</li>
+      <li>Numbers</li>
+      <li>Special symbols</li>
+    </ul>
+  </li>
+  <li>🎨 Automatic detection of <code>figlet</code> & <code>lolcat</code></li>
+  <li>💾 Optional secure password saving</li>
+  <li>🔒 Saved files use permission <code>600</code></li>
+</ul>
 
--------------------------------------------
+---
 
-### ⚙️ Mandatory Requirements
+<!-- ===================== OPTIONAL TOOLS ===================== -->
+<h2 align="center"> 🎨 Optional Visual Enhancements </h2>
 
- Only the following are required:
+<p align="center">
+These tools are <strong>optional</strong> and only enhance visual output.<br>
+PassGen works perfectly without them.
+</p>
 
- 🐚 Bash shell (default on most Linux distributions)
+<pre><strong>
+sudo apt install lolcat
 
- 💻 Basic command-line environment
+git clone https://github.com/xero/figlet-fonts.git
+cd figlet-fonts
+rm README.md
+sudo mv * /usr/share/figlet
+</strong></pre>
 
- No additional dependencies are needed.
+---
 
--------------------------------
+<!-- ===================== REQUIREMENTS ===================== -->
+<h2 align="center"> ⚙️ Requirements </h2>
 
-### ▶️ How to Run the Script
- 
-   1️⃣ Navigate to the script directory:
-  
-   ```cd /path/to/script```
-  
-  
-   2️⃣ Make the script executable:
-  
-  ```chmod +x script_name.sh```
-  
-  
-   3️⃣ Run the script:
-  
-   ```./script_name.sh```
-  
-   OR
-   
-   4️⃣ Run the script:
-  
-   ```bash script_name.sh```
+<ul>
+  <li>🐚 Bash shell</li>
+  <li>💻 Basic Linux command-line environment</li>
+</ul>
 
-🚀 The script will start immediately.
+<p align="center"><strong>No additional dependencies required</strong></p>
 
-----------------------
+---
 
-### 🧠 Design Philosophy
+<!-- ===================== STRUCTURE ===================== -->
+<h2 align="center"> 📁 Project Structure </h2>
 
- ✔️ Works on clean Linux systems
+<pre><strong>
+passgen
+passgen-lib/
+├── utils.sh        # Helper & utility functions
+├── help.sh         # CLI help & version handling
+├── generator.sh    # Core password generation logic
+└── banner.sh       # Visual banner & output handling
+</strong></pre>
 
- ✔️ No forced dependencies
+---
 
- ✔️ Automatic feature detection
+<!-- ===================== PERMISSIONS ===================== -->
+<h2 align="center"> 🔐 Set Execute Permissions </h2>
 
- ✔️ Clean and readable output
+<pre><strong>
+chmod +x passgen
+chmod +x passgen-lib/*.sh
+</strong></pre>
 
------------------------------
+---
 
-### 📎Notes
+<!-- ===================== INSTALLATION ===================== -->
+<h2 align="center"> 📦 System-Wide Installation </h2>
 
- Tested on common Linux distributions
+<pre><strong>
+sudo mv passgen /usr/local/bin/passgen
+sudo mv passgen-lib /usr/local/bin/passgen-lib
+</strong></pre>
 
- Safe to run without root (except for optional installations)
+<p align="center">
+Final installation layout:
+</p>
 
- Ideal for terminals, servers, and minimal environments
+<pre><strong>
+/usr/local/bin/
+├── passgen
+└── passgen-lib/
+    ├── utils.sh
+    ├── help.sh
+    ├── generator.sh
+    └── banner.sh
+</strong></pre>
 
+---
+
+<!-- ===================== USAGE ===================== -->
+<h2 align="center"> ▶️ Usage </h2>
+
+<pre><strong>
+passgen
+</strong></pre>
+
+<p align="center">
+or locally:
+</p>
+
+<pre><strong>
+./passgen
+</strong></pre>
+
+---
+
+<!-- ===================== SECURITY ===================== -->
+<h2 align="center"> 🔐 Security Notes </h2>
+
+<ul>
+  <li>Uses <code>/dev/urandom</code> for cryptographic randomness</li>
+  <li>No predictable randomness (<code>$RANDOM</code> not used)</li>
+  <li>Saved passwords are local and restricted</li>
+  <li>Safe to run without root (except installation)</li>
+</ul>
+
+---
+
+<!-- ===================== AUTHOR ===================== -->
+<h2 align="center"> 👤 Author </h2>
+
+<p align="center">
+<strong>x606</strong><br>
+Penetration Testing Enthusiast<br>
+Offensive Security • Red Team Fundamentals • Automation
+</p>
+
+---
+
+<!-- ===================== FOOTER ===================== -->
+<div align="center">
+  <img 
+    src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer"
+    width="100%"
+  />
+</div>
