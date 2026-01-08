@@ -95,7 +95,7 @@ sudo mv * /usr/share/figlet
 Get the project source code directly from GitHub:
 </p>
 
-```diff
+```bash
 + git clone https://github.com/xismail606/SECURE-PASSWORD-GENERATOR.git
 + cd SECURE-PASSWORD-GENERATOR
 ```
