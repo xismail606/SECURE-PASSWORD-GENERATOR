@@ -134,7 +134,7 @@ The script will:
 ---
 
 <!-- ===================== MANUAL INSTALLATION ===================== -->
-<h2 align="center"> 🛠️(Optional) Manual Visual Enhancements Setup </h2>
+<h2 align="center"> 🛠️ (Optional) Manual Visual Enhancements Setup </h2>
 
 <p align="center">
 These steps are <strong>manual</strong> and only enhance visual output.<br />
