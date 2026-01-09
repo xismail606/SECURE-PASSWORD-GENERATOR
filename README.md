@@ -152,7 +152,6 @@ rm README.md
 sudo mv * /usr/share/figlet
 ```
 
-<hr />
 ---
 
 <!-- ===================== PERMISSIONS ===================== -->
