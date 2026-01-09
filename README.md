@@ -91,6 +91,7 @@ After cloning, follow the installation steps below to set permissions and instal
 ```bash
 SECURE-PASSWORD-GENERATOR
 ├── passgen
+├── optional-requirements.sh
 └──passgen-lib/
   ├── utils.sh        # Helper & utility functions
   ├── help.sh         # CLI help & version handling
@@ -112,10 +113,10 @@ all visual enhancement tools.
 <strong>This step is optional</strong> and only affects appearance (colors & banners).
 </p>
 
-<pre><strong>
+```bash
 chmod +x optional-requirements.sh
 ./optional-requirements.sh
-</strong></pre>
+```
 
 <p align="center">
 The script will:
@@ -141,14 +142,14 @@ These steps are <strong>manual</strong> and only enhance visual output.<br />
 PassGen works perfectly without them.
 </p>
 
-<pre><strong>
+```bash
 sudo apt install lolcat
 
 git clone https://github.com/xero/figlet-fonts.git
 cd figlet-fonts
 rm README.md
 sudo mv * /usr/share/figlet
-</strong></pre>
+```
 
 <hr />
 ---
