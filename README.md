@@ -55,6 +55,7 @@ design_principles:
 </ul>
 
 ---
+
 <!-- ===================== REQUIREMENTS ===================== -->
 <h2 align="center"> ⚙️ Requirements </h2>
 
