@@ -55,60 +55,6 @@ design_principles:
 </ul>
 
 ---
-
-<!-- ===================== OPTIONAL TOOLS ===================== -->
-<h2 align="center"> 🎨 Optional Visual Enhancements </h2>
-
-<p align="center">
-These tools are <strong>optional</strong> and only enhance visual output.<br>
-PassGen works perfectly without them.
-</p>
-
-```bash
-sudo apt install lolcat
-
-git clone https://github.com/xero/figlet-fonts.git
-cd figlet-fonts
-rm README.md
-sudo mv * /usr/share/figlet
-```
-
----
-<hr />
-
-<!-- ===================== OPTIONAL SCRIPT ===================== -->
-<h2 align="center"> 🧩 Optional Requirements Script </h2>
-
-<p align="center">
-For convenience, PassGen provides an optional installation script that automatically installs
-all visual enhancement tools.
-</p>
-
-<p align="center">
-<strong>This step is optional</strong> and only affects appearance (colors & banners).
-</p>
-
-<pre><strong>
-chmod +x optional-requirements.sh
-./optional-requirements.sh
-</strong></pre>
-
-<p align="center">
-The script will:
-</p>
-
-<ul>
-  <li>Install <code>lolcat</code>, <code>figlet</code>, and <code>git</code></li>
-  <li>Download and install extra <code>figlet</code> fonts</li>
-  <li>Keep PassGen fully functional even if skipped</li>
-</ul>
-
-<p align="center">
-⚠️ <strong>Note:</strong> The script requires <code>sudo</code> privileges.
-</p>
-
----
-
 <!-- ===================== REQUIREMENTS ===================== -->
 <h2 align="center"> ⚙️ Requirements </h2>
 
@@ -152,6 +98,59 @@ SECURE-PASSWORD-GENERATOR
   └── banner.sh       # Visual banner & output handling
 ```
 
+---
+
+<!-- ===================== OPTIONAL SCRIPT ===================== -->
+<h2 align="center"> 🧩(Optional) Automatic Visual Enhancements Setup "Script" </h2>
+
+<p align="center">
+For convenience, PassGen provides an optional installation script that automatically installs
+all visual enhancement tools.
+</p>
+
+<p align="center">
+<strong>This step is optional</strong> and only affects appearance (colors & banners).
+</p>
+
+<pre><strong>
+chmod +x optional-requirements.sh
+./optional-requirements.sh
+</strong></pre>
+
+<p align="center">
+The script will:
+</p>
+
+<ul>
+  <li>Install <code>lolcat</code>, <code>figlet</code>, and <code>git</code></li>
+  <li>Download and install extra <code>figlet</code> fonts</li>
+  <li>Keep PassGen fully functional even if skipped</li>
+</ul>
+
+<p align="center">
+⚠️ <strong>Note:</strong> The script requires <code>sudo</code> privileges.
+</p>
+
+---
+
+<!-- ===================== MANUAL INSTALLATION ===================== -->
+<h2 align="center"> 🛠️(Optional) Manual Visual Enhancements Setup </h2>
+
+<p align="center">
+These steps are <strong>manual</strong> and only enhance visual output.<br />
+PassGen works perfectly without them.
+</p>
+
+<pre><strong>
+sudo apt install lolcat
+
+git clone https://github.com/xero/figlet-fonts.git
+cd figlet-fonts
+rm README.md
+sudo mv * /usr/share/figlet
+</strong></pre>
+
+<hr />
 ---
 
 <!-- ===================== PERMISSIONS ===================== -->
