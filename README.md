@@ -74,6 +74,40 @@ sudo mv * /usr/share/figlet
 ```
 
 ---
+<hr />
+
+<!-- ===================== OPTIONAL SCRIPT ===================== -->
+<h2 align="center"> 🧩 Optional Requirements Script </h2>
+
+<p align="center">
+For convenience, PassGen provides an optional installation script that automatically installs
+all visual enhancement tools.
+</p>
+
+<p align="center">
+<strong>This step is optional</strong> and only affects appearance (colors & banners).
+</p>
+
+<pre><strong>
+chmod +x optional-requirements.sh
+./optional-requirements.sh
+</strong></pre>
+
+<p align="center">
+The script will:
+</p>
+
+<ul>
+  <li>Install <code>lolcat</code>, <code>figlet</code>, and <code>git</code></li>
+  <li>Download and install extra <code>figlet</code> fonts</li>
+  <li>Keep PassGen fully functional even if skipped</li>
+</ul>
+
+<p align="center">
+⚠️ <strong>Note:</strong> The script requires <code>sudo</code> privileges.
+</p>
+
+---
 
 <!-- ===================== REQUIREMENTS ===================== -->
 <h2 align="center"> ⚙️ Requirements </h2>
