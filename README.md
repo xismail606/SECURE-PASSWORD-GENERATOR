@@ -116,7 +116,7 @@ all visual enhancement tools.
 
 ```bash
 chmod +x optional-requirements.sh
-./optional-requirements.sh
+sudo ./optional-requirements.sh
 ```
 
 <p align="center">
