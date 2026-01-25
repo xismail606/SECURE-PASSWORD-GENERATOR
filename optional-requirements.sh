@@ -11,8 +11,8 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-echo "[*] Installing optional packages (lolcat, figlet, git)..."
-apt install -y lolcat figlet git
+echo "[*] Installing optional packages (lolcat, figlet)..."
+apt install -y lolcat figlet
 
 TMP_DIR="/tmp/figlet-fonts"
 
