@@ -117,6 +117,7 @@ all visual enhancement tools.
 ```bash
 chmod +x optional-requirements.sh
 sudo ./optional-requirements.sh
+showfigfonts
 ```
 
 <p align="center">
@@ -150,6 +151,7 @@ git clone https://github.com/xero/figlet-fonts.git
 cd figlet-fonts
 rm README.md
 sudo mv * /usr/share/figlet
+showfigfonts
 ```
 
 ---
