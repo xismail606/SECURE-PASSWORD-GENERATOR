@@ -33,6 +33,7 @@ design_principles:
   - Modular Architecture
   - Clean CLI Experience
 ```
+
 ---
 
 <!-- ===================== FEATURES ===================== -->
@@ -91,13 +92,14 @@ After cloning, follow the installation steps below to set permissions and instal
 
 ```bash
 SECURE-PASSWORD-GENERATOR
-├── passgen
-├── optional-requirements.sh
-└──passgen-lib/
-  ├── utils.sh        # Helper & utility functions
-  ├── help.sh         # CLI help & version handling
-  ├── generator.sh    # Core password generation logic
-  └── banner.sh       # Visual banner & output handling
+├── passgen                    # Main entry point
+├── install.sh                 # Automated installer
+├── optional-requirements.sh   # Optional visual enhancements
+└── passgen-lib/
+    ├── utils.sh               # Helper & utility functions
+    ├── help.sh                # CLI help & version handling
+    ├── generator.sh           # Core password generation logic
+    └── banner.sh              # Visual banner & output handling
 ```
 
 ---
@@ -156,22 +158,51 @@ showfigfonts
 
 ---
 
-<!-- ===================== PERMISSIONS ===================== -->
-<h2 align="center"> 🔐 Set Execute Permissions </h2>
+<!-- ===================== QUICK INSTALL ===================== -->
+<h2 align="center"> 🚀 Quick Install (Recommended) </h2>
+
+<p align="center">
+Use the automated installer to set permissions and install system-wide in one step:
+</p>
+
+```bash
+chmod +x install.sh
+sudo ./install.sh
+```
+
+<p align="center">
+The installer will automatically:
+</p>
+
+<ul>
+  <li>✅ Verify all project files exist</li>
+  <li>🔐 Set execute permissions on all scripts</li>
+  <li>🗑️ Remove any previous installation</li>
+  <li>📦 Install <code>passgen</code> system-wide to <code>/usr/local/bin/</code></li>
+  <li>✔️ Verify the installation</li>
+</ul>
+
+---
+
+<!-- ===================== MANUAL INSTALL ===================== -->
+<h2 align="center"> 🔧 Manual Installation (Alternative) </h2>
+
+<p align="center">
+If you prefer to install manually instead of using the installer:
+</p>
+
+<h4> 🔐 Set Execute Permissions </h4>
 
 ```bash
 chmod +x passgen
 chmod +x passgen-lib/*.sh
 ```
 
----
-
-<!-- ===================== INSTALLATION ===================== -->
-<h2 align="center"> 📦 System-Wide Installation </h2>
+<h4> 📦 System-Wide Installation </h4>
 
 ```bash
-sudo mv passgen /usr/local/bin/
-sudo mv passgen-lib /usr/local/bin/
+sudo cp passgen /usr/local/bin/
+sudo cp -r passgen-lib /usr/local/bin/
 ```
 
 <p align="center">
@@ -199,7 +230,6 @@ passgen
 passgen --help
 passgen --version
 ```
-
 
 ---
 
