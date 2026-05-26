@@ -17,6 +17,13 @@
   Designed for clean systems with zero forced dependencies.
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/version-2.0.0-blue?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/badge/language-Bash-green?style=flat-square" alt="Language">
+  <img src="https://img.shields.io/badge/platform-Linux-orange?style=flat-square" alt="Platform">
+  <img src="https://img.shields.io/badge/license-MIT-yellow?style=flat-square" alt="License">
+</p>
+
 ---
 
 <!-- ===================== ABOUT ===================== -->
@@ -26,13 +33,30 @@
 tool_name: PassGen
 type: CLI Security Utility
 language: Bash
+version: 2.0.0
 platform: Linux
 design_principles:
   - Security First
   - Zero Forced Dependencies
   - Modular Architecture
   - Clean CLI Experience
+  - Interactive & Non-Interactive Modes
 ```
+
+---
+
+<!-- ===================== WHATS NEW ===================== -->
+<h2 align="center"> 🆕 What's New in v2.0.0 </h2>
+
+<ul>
+  <li>🚀 <strong>Non-Interactive CLI Mode</strong> – Generate passwords with flags, no prompts needed</li>
+  <li>📊 <strong>Password Strength Meter</strong> – Visual progress bar with color-coded rating</li>
+  <li>🎯 <strong>Preset Profiles</strong> – Quick generation with <code>--preset pin|strong|wifi|memorable</code></li>
+  <li>📋 <strong>Clipboard Support</strong> – Copy passwords directly with <code>--copy</code></li>
+  <li>🔢 <strong>Batch Generation</strong> – Generate multiple passwords with <code>-c/--count</code></li>
+  <li>📁 <strong>Custom Output</strong> – Save to specific file with <code>-o/--output</code></li>
+  <li>🎨 <strong>Colored Help Output</strong> – Beautiful, organized <code>--help</code> with categories</li>
+</ul>
 
 ---
 
@@ -41,7 +65,7 @@ design_principles:
 
 <ul>
   <li>🔐 Cryptographically secure randomness using <code>/dev/urandom</code></li>
-  <li>⚙️ Custom password length</li>
+  <li>⚙️ Custom password length (interactive or via <code>-l/--length</code>)</li>
   <li>🔡 Character set selection:
     <ul>
       <li>Lowercase letters</li>
@@ -50,8 +74,13 @@ design_principles:
       <li>Special symbols</li>
     </ul>
   </li>
+  <li>📊 Password strength meter with visual progress bar</li>
+  <li>🎯 Preset profiles for quick generation</li>
+  <li>🔢 Batch password generation (<code>-c/--count</code>)</li>
+  <li>📋 Clipboard support (xclip / xsel / pbcopy / wl-copy)</li>
   <li>🎨 Automatic detection of <code>figlet</code> & <code>lolcat</code></li>
-  <li>💾 Optional secure password saving</li>
+  <li>💾 Optional secure password saving (interactive or auto with <code>--save</code>)</li>
+  <li>📁 Custom output file (<code>-o/--output</code>)</li>
   <li>🔒 Saved files use permission <code>600</code></li>
 </ul>
 
@@ -97,9 +126,10 @@ SECURE-PASSWORD-GENERATOR
 ├── optional-requirements.sh   # Optional visual enhancements
 └── passgen-lib/
     ├── utils.sh               # Helper & utility functions
-    ├── help.sh                # CLI help & version handling
+    ├── help.sh                # CLI help, version & argument parsing
     ├── generator.sh           # Core password generation logic
-    └── banner.sh              # Visual banner & output handling
+    ├── banner.sh              # Visual banner & output handling
+    └── strength.sh            # Password strength meter
 ```
 
 ---
@@ -216,7 +246,8 @@ Final installation layout:
     ├── utils.sh
     ├── help.sh
     ├── generator.sh
-    └── banner.sh
+    ├── banner.sh
+    └── strength.sh
 ```
 
 ---
@@ -224,12 +255,108 @@ Final installation layout:
 <!-- ===================== USAGE ===================== -->
 <h2 align="center"> ▶️ Usage </h2>
 
+<h4> 🔄 Interactive Mode (Default) </h4>
+
+<p>Run without arguments for the classic interactive experience:</p>
+
 ```bash
 passgen
--
+```
+
+<h4> ⚡ Non-Interactive Mode </h4>
+
+<p>Use CLI flags for quick generation without prompts:</p>
+
+```bash
+# Generate a 16-character password with all character types
+passgen -l 16 --all
+
+# Generate 5 passwords at once
+passgen -l 20 --all -c 5
+
+# Generate and auto-save
+passgen -l 12 --all --save
+
+# Generate and copy to clipboard
+passgen -l 24 --all --copy
+
+# Save to a specific file
+passgen -l 18 --all -o my_password.txt
+
+# Numbers only, no letters or symbols
+passgen -l 8 --no-lower --no-upper --no-symbols
+```
+
+<h4> 🎯 Presets </h4>
+
+<p>Use built-in presets for common use cases:</p>
+
+```bash
+# 4-digit numeric PIN
+passgen --preset pin
+
+# 20 chars, all character types (maximum security)
+passgen --preset strong
+
+# 63 chars, alphanumeric (perfect for WiFi passwords)
+passgen --preset wifi
+
+# 16 chars, lowercase + numbers (easy to type)
+passgen --preset memorable
+```
+
+<h4> 📖 Help & Version </h4>
+
+```bash
 passgen --help
 passgen --version
 ```
+
+---
+
+<!-- ===================== CLI REFERENCE ===================== -->
+<h2 align="center"> 📋 CLI Reference </h2>
+
+| Flag | Description |
+|---|---|
+| `-h`, `--help` | Show help message and exit |
+| `-v`, `--version` | Show version information and exit |
+| `-l`, `--length <N>` | Set password length |
+| `-c`, `--count <N>` | Generate multiple passwords (default: 1) |
+| `-s`, `--save` | Auto-save password without asking |
+| `-o`, `--output <file>` | Save password to a specific file |
+| `--copy` | Copy password to clipboard |
+| `--all` | Include all character types |
+| `--no-lower` | Exclude lowercase letters |
+| `--no-upper` | Exclude uppercase letters |
+| `--no-nums` | Exclude numbers |
+| `--no-symbols` | Exclude special symbols |
+| `--preset <name>` | Use a preset profile (`pin`, `strong`, `wifi`, `memorable`) |
+
+---
+
+<!-- ===================== STRENGTH METER ===================== -->
+<h2 align="center"> 📊 Password Strength Meter </h2>
+
+<p align="center">
+Every generated password is automatically evaluated and rated:
+</p>
+
+```
+  Password Strength: ████████████████████ Excellent (95/100) 💎
+  Characters: [a-z] [A-Z] [0-9] [!@#]  | Length: 24
+```
+
+| Score | Rating | Indicator |
+|---|---|---|
+| 75 – 100 | Excellent | 💎 Purple bar |
+| 50 – 74 | Strong | 🟢 Green bar |
+| 30 – 49 | Fair | 🟡 Yellow bar |
+| 0 – 29 | Weak | 🔴 Red bar |
+
+<p align="center">
+<strong>Scoring factors:</strong> Password length, character diversity (lowercase, uppercase, numbers, symbols), and bonus for using all character types.
+</p>
 
 ---
 
@@ -240,7 +367,17 @@ passgen --version
   <li>Uses <code>/dev/urandom</code> for cryptographic randomness</li>
   <li>No predictable randomness (<code>$RANDOM</code> not used)</li>
   <li>Saved passwords are local and restricted</li>
+  <li>File permissions set to <code>600</code> (owner read/write only)</li>
   <li>Safe to run without root (except installation)</li>
+</ul>
+
+<h4>💡 Tips</h4>
+
+<ul>
+  <li>★ Use at least 12 characters for strong passwords</li>
+  <li>★ Mix all character types for maximum entropy</li>
+  <li>★ Use <code>--preset strong</code> for a quick secure password</li>
+  <li>★ Never reuse passwords across different accounts</li>
 </ul>
 
 ---

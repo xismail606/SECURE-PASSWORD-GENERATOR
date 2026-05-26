@@ -43,7 +43,7 @@ if [[ ! -f "$SCRIPT_DIR/passgen" ]]; then
     error "Missing file: passgen (main script not found)"
 fi
 
-for lib_file in utils.sh help.sh generator.sh banner.sh; do
+for lib_file in utils.sh help.sh generator.sh banner.sh strength.sh; do
     if [[ ! -f "$SCRIPT_DIR/passgen-lib/$lib_file" ]]; then
         error "Missing file: passgen-lib/$lib_file"
     fi
@@ -100,7 +100,8 @@ echo -e "  └── passgen-lib/"
 echo -e "      ├── utils.sh"
 echo -e "      ├── help.sh"
 echo -e "      ├── generator.sh"
-echo -e "      └── banner.sh"
+echo -e "      ├── banner.sh"
+echo -e "      └── strength.sh"
 echo ""
 echo -e "  ${BOLD}Usage:${NC}"
 echo -e "    passgen            ${CYAN}# Run the generator${NC}"

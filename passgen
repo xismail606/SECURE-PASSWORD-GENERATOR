@@ -6,6 +6,7 @@ BASE_DIR="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)/passgen-lib"
 source "/usr/local/bin/passgen-lib/help.sh"
 source "/usr/local/bin/passgen-lib/utils.sh"
 source "/usr/local/bin/passgen-lib/banner.sh"
+source "/usr/local/bin/passgen-lib/strength.sh"
 source "/usr/local/bin/passgen-lib/generator.sh"
 
 handle_cli "$@"
